@@ -1,0 +1,146 @@
+.form {
+  padding: 40px;
+}
+
+.form__header {
+  margin: 0;
+  padding-bottom: 30px;
+
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: $titles-text-color;
+}
+
+.form__field {
+  position: relative;
+
+  display: block;
+  margin-bottom: 28px;
+}
+
+.form__input {
+  width: 100%;
+  padding: 12px 16px;
+  padding-left: 42px;
+  display: block;
+  border: 1px solid $form-field-border;
+  border-radius: 4px;  
+}
+
+.form__label {
+  position: absolute;
+  top: 0;
+  left: 42px;
+  transform: translateY(50%);
+
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+  color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  .form__field:focus-within > &,
+  .form__input:not(:placeholder-shown) + & {
+  transform: translate(-27px, -20px);
+  color: $accent-text-color;
+  }
+}
+
+textarea {
+  height: 120px;
+  margin: 0;
+}
+
+.textarea__label {
+  position: absolute;
+  top: 0;
+  left: 16px;
+  transform: translateY(50%);
+
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+  color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  .form__field:focus-within > &,
+  .form__input:not(:placeholder-shown) + & {
+    transform: translate(2px, -20px);
+    color: $accent-text-color;
+  }
+}
+
+.form__icon {
+  position: absolute;
+  top: 13px;
+  left: 16px;
+
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+  background-size: cover;
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  .form__field:focus-within > & {
+    fill: $accent-text-color;
+  }
+}
+
+.policy {
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  padding-left: 13px;
+  align-items: center;
+}
+
+.policy input[type='checkbox'] {
+  margin-right: 8px;
+}
+
+.policy__text {
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+
+  color: $primary-text-color;
+}
+
+.policy a {
+  color: $accent-text-color;
+}
+
+.checkbox {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.check-icon {
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  margin-right: 8px;
+
+  border: 2px solid $titles-text-color;
+  border-radius: 4px;
+
+  .checkbox:checked + & {
+    background-image: url('../images/icon-check-blue.svg');
+    background-size: cover;
+    background-origin: border-box;
+    border: 2px solid transparent;
+  }
+}
+
+.form__send-button {
+  @extend %button;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+

@@ -1,0 +1,40 @@
+.header--fixed {
+  position: fixed;
+  top: 0;
+
+  width: 100%;
+  min-height: 80px;
+  z-index: 3;
+
+  background-color: $header-background-color;
+}
+
+.header--positioned {
+  @extend %container;
+  display: flex;
+  align-items: center;
+}
+
+.header__logo {
+  @extend %ancor;
+  display: block;
+  padding-top: 25px;
+  padding-bottom: 25px;
+
+  font-family: $logo-font;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  color: $logo-text-color;
+  }
+
+.header__logo .web {
+  color: $accent-text-color;
+}
+
+// For portfolio
+.header__border {
+  border-bottom: 1px solid $header-border-color;
+} 

@@ -1,0 +1,27 @@
+.filters {
+  padding-top: 93px;
+  padding-bottom: 50px;
+}
+
+.filters__header {
+  @extend %visually-hidden;
+}
+
+.filters__list-cover {
+  @extend %container;
+  @extend %list;
+}
+
+.filters__list {
+  display: flex;
+  justify-content: center;
+}
+
+.filters__list-item + .filters__list-item {
+  margin-left: 8px;
+}
+
+.filters__button {
+  @extend %button-portfolio;
+  @extend %ancor;
+}

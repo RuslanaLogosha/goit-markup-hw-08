@@ -1,0 +1,176 @@
+.footer {
+  background-color: $footer-background-color;
+}
+
+.footer-flex {
+  @extend %container;
+  display: flex;
+  justify-content: space-between;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer__logo {
+  display: block;
+  margin-top: 48px;
+  margin-bottom: 10px;
+
+  font-family: Raleway;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 1.18;
+  letter-spacing: 0.03em;
+  color: $main-title-color;
+}
+
+.footer__logo .web{
+  color: $accent-text-color;
+}
+
+.address {
+  display: block; 
+  padding-bottom: 28px;
+}
+
+.address__name {
+  margin-top: 0;
+  margin-bottom: 0;
+  
+  font-style: normal;
+  letter-spacing: 0.03em;
+  color: $main-title-color;
+}
+
+.footer__contact {
+  @extend %ancor;
+  display: block;
+  margin-top: 9px;
+
+  font-style: normal;
+  letter-spacing: 0.03em;
+  color: $footer-opaque-color;
+}
+
+/* Connect social  */
+
+.connect__text {
+  margin-top: 48px;
+  margin-bottom: 21px;
+
+  font-weight: 700;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: $main-title-color;
+}
+
+.footer__icons-list {
+  @extend %list;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 24px;
+}
+
+.footer__icons-list > li + li {
+  margin-left: 10px;
+}
+
+.footer__social-icon {
+  width: 44px;
+  height: 44px;
+  fill: $main-title-color;
+  border-radius: 50%;
+  background-color: $icons-footer-background;
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+      fill: $main-title-color;
+      background-color: $accent-text-color;
+  }
+}
+
+/* Subscribe */
+.subscribe__email {
+  margin-right: 10px;
+  width: 358px;
+  height: 49px;
+  padding: 15px 16px;
+  
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.03em;
+  color: $footer-opaque-color;
+  border: 1px solid $footer-subscribe-border;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  background-color: $footer-background-color;
+}
+
+/* Training of button with 2 pseudoelements flying aroud */
+.subscribe__button {
+  @extend %button;
+  position: relative;
+  overflow: hidden;
+
+  &:hover,
+  &:focus {
+    background-color: palevioletred;
+  }
+}
+
+.btn-text {
+  display: inline-flex;
+  font-weight: 900;
+  font-family: Roboto;
+  align-content: baseline;
+  cursor: pointer;
+  overflow: hidden;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &::after {
+    content: '';
+    display: inline-block;
+    margin-left: 10px;
+    width: 24px;
+    height: 24px;
+    align-content: center;
+    
+    background-image: url('../images/send.svg');
+    background-size: contain;
+  
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &:hover::after {
+    transform: translateY(-35px);
+  }
+
+  &::before {
+    position: absolute;
+    transform: translateY(40px);
+  
+    right: 30px;
+    content: '';
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    
+    background-image: url(../images/mail.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    fill: $main-title-color;
+   
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &:hover::before {
+    transform: translateY(0);
+  }
+
+}
+
+
