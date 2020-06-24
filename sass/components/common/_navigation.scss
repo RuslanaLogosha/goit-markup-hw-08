@@ -27,7 +27,7 @@
 
   display: block;
   padding-top: 32px;
-  padding-bottom: 32px;
+  padding-bottom: 32.5px;
 
   font-weight: 500;
   line-height: 1.14;
@@ -37,6 +37,10 @@
 
   &:hover, &:focus {
     color: $accent-text-color;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    padding-bottom: 31px;
   }
 }
 
@@ -98,14 +102,14 @@
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .site-auth__button-mail {
     padding-top: 21px;
     margin-bottom: 10px;
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .site-auth__button-tel {
     padding-bottom: 21px;
   }
