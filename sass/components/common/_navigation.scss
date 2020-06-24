@@ -1,11 +1,21 @@
 .main-nav {
-  display: flex;
+  @media screen and (min-width: 768px) {
+    display: flex;
+  }
 }
 
 .site-nav {
   @extend %list;
-  display: flex;
-  margin-left: 86px;
+  display: none;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    margin-left: 81px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-left: 85px;
+  }
 }
 
 .site-nav__item + .site-nav__item {
@@ -17,7 +27,7 @@
 
   display: block;
   padding-top: 32px;
-  padding-bottom: 34px;
+  padding-bottom: 32px;
 
   font-weight: 500;
   line-height: 1.14;
@@ -58,19 +68,49 @@
 
 .site-auth {
   @extend %list;
-  display: flex;
   margin-left: auto;
+  display: none;
+  
+  @media screen and (min-width: 768px) {
+    display: block;
+  }
+  
+  @media screen and (min-width: 1200px) {
+    display: flex;
+  }
 }
 
 .site-auth__item + .site-auth__item {
-  margin-left: 30px;
+  @media screen and (min-width: 1200px){
+    margin-left: 30px;
+  }
 }
 
 .site-auth__button {
-  display: inline-block;
-  padding-top: 32px;
-  padding-bottom: 32px; 
+  @media screen and (min-width: 768px) {
+    display: block;
+  } 
+
+  @media screen and (min-width: 1200px) {
+    display: inline-block;
+    padding-top: 32px;
+    padding-bottom: 32px; 
+  }
 }
+
+@media screen and (min-width: 768px) {
+  .site-auth__button-mail {
+    padding-top: 21px;
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .site-auth__button-tel {
+    padding-bottom: 21px;
+  }
+}
+
 
 .site-auth__link {
   display: flex;

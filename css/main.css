@@ -310,7 +310,6 @@ h1, h2, h3 {
 }
 
 .header--positioned, .advantages__container, .specialization__container, .team__container, .customers__container, .footer-flex, .filters__list-cover, .examples__container {
-  width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
@@ -371,10 +370,29 @@ h1, h2, h3 {
 .header--fixed {
   position: fixed;
   top: 0;
-  width: 100%;
-  min-height: 80px;
   z-index: 3;
   background-color: #FFFFFF;
+}
+
+@media screen and (max-width: 767px) {
+  .header--fixed {
+    width: 480px;
+    height: 60px;
+    min-height: 60px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .header--fixed {
+    width: 768px;
+    height: 80px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .header--fixed {
+    width: 1200px;
+  }
 }
 
 .header--positioned {
@@ -393,10 +411,36 @@ h1, h2, h3 {
   font-family: Raleway;
   font-style: normal;
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
   letter-spacing: 0.03em;
   color: #000000;
+}
+
+@media screen and (max-width: 767px) {
+  .header__logo {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .header__logo {
+    padding-top: 26px;
+    padding-bottom: 26px;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .header__logo {
+    font-size: 24px;
+    line-height: 1.16;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .header__logo {
+    font-size: 26px;
+    line-height: 1.19;
+  }
 }
 
 .header__logo .web {
@@ -407,17 +451,31 @@ h1, h2, h3 {
   border-bottom: 1px solid #ECECEC;
 }
 
-.main-nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+@media screen and (min-width: 768px) {
+  .main-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 .site-nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-left: 86px;
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .site-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-left: 81px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .site-nav {
+    margin-left: 85px;
+  }
 }
 
 .site-nav__item + .site-nav__item {
@@ -427,7 +485,7 @@ h1, h2, h3 {
 .site-nav__link {
   display: block;
   padding-top: 32px;
-  padding-bottom: 34px;
+  padding-bottom: 32px;
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
@@ -471,20 +529,55 @@ h1, h2, h3 {
 }
 
 .site-auth {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   margin-left: auto;
+  display: none;
 }
 
-.site-auth__item + .site-auth__item {
-  margin-left: 30px;
+@media screen and (min-width: 768px) {
+  .site-auth {
+    display: block;
+  }
 }
 
-.site-auth__button {
-  display: inline-block;
-  padding-top: 32px;
-  padding-bottom: 32px;
+@media screen and (min-width: 1200px) {
+  .site-auth {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .site-auth__item + .site-auth__item {
+    margin-left: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .site-auth__button {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .site-auth__button {
+    display: inline-block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .site-auth__button-mail {
+    padding-top: 21px;
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .site-auth__button-tel {
+    padding-bottom: 21px;
+  }
 }
 
 .site-auth__link {
@@ -549,8 +642,6 @@ h1, h2, h3 {
 
 .hero__overlay {
   position: relative;
-  min-width: 1600px;
-  height: 600px;
   margin-left: 0;
   margin-right: 0;
   background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.8)), to(rgba(47, 48, 58, 0.8))), url("../images/Header.jpg");
@@ -559,6 +650,27 @@ h1, h2, h3 {
   background-position: center;
   background-size: cover;
   background-color: #2F303A;
+}
+
+@media screen and (min-width: 480px) {
+  .hero__overlay {
+    width: 480px;
+    height: 400px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .hero__overlay {
+    width: 768px;
+    height: 400px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero__overlay {
+    width: 1600px;
+    height: 600px;
+  }
 }
 
 .backdrop {
@@ -1040,9 +1152,6 @@ textarea {
 }
 
 .footer-flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
