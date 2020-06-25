@@ -24,7 +24,7 @@
     display: flex;
     flex-wrap: wrap;
     margin: -15px;
-    }
+  }
 
   @media screen and (min-width: 1200px) {
     padding-bottom: 94px;
@@ -45,6 +45,11 @@
   @media screen and (max-width: 767px) {
     text-align: center;
   }
+
+  @media screen and (min-width: 1200px){
+    width: 270px;
+    display: block;
+  }
 }
 
 .advantages__text {
@@ -52,6 +57,11 @@
   margin-bottom: 0;
 
   letter-spacing: 0.03em;
+
+  @media screen and (min-width: 1200px){
+    width: 270px;
+    display: block;
+  }
 }
 
 .advantages__item {
@@ -62,7 +72,8 @@
   }
 
   @media screen and (min-width: 1200px) {
-    width: calc((100% - 90px) / 4);
+    // width: calc((100% - 90px) / 4); не работате как для 1170px
+    width: 270px;
   }
   
   &:not(:last-child) {
@@ -72,12 +83,12 @@
   }
 }
 
-.advantages__item + .advantages__item {
+// .advantages__item + .advantages__item {
 
-  @media screen and (min-width: 1200px) {
-    margin-left: 30px;
-  }
-}
+//   @media screen and (min-width: 1200px) {
+//     margin-left: 30px;
+//   }
+// }
 
 .advantages__icon {
   width: 70px;
@@ -87,6 +98,7 @@
 .advantages__icon-bcg {
   display: flex;
   height: 120px;
+  margin: 0;
   justify-content: center;
   align-items: center;
   background-color: $team-background-color;
@@ -102,5 +114,7 @@
 
   @media screen and (min-width: 1200px){
     width: 270px;
+    
+   
   }
 }
