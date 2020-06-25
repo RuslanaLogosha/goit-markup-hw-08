@@ -1,9 +1,15 @@
 .advantages {
-  padding-top: 60px;
+  @extend %section-paddings;
   background-color: $main-background-color;
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (max-width: 1199px){
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  @media screen and (min-width: 1200px){
     padding-top: 94px;
+    padding-bottom: 94px;
   }
 }
 
@@ -18,7 +24,6 @@
 .advantages__list {
   @extend %list;
   position: relative; 
-  padding-bottom: 60px;
  
   @media screen and (min-width: 768px) {
     display: flex;
@@ -27,7 +32,9 @@
   }
 
   @media screen and (min-width: 1200px) {
-    padding-bottom: 94px;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    margin-top: 0;
   }
 }
 
@@ -114,7 +121,5 @@
 
   @media screen and (min-width: 1200px){
     width: 270px;
-    
-   
   }
 }

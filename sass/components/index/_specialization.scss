@@ -1,8 +1,11 @@
 .specialization {
-  padding-top: 94px;
   padding-bottom: 94px;
 
   background-color: $main-background-color;
+
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
 }
 
 .specialization__main-title {

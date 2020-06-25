@@ -377,13 +377,39 @@ h1, h2, h3 {
 }
 
 .specialization__main-title, .team__main-title, .customers__main-title {
-  margin-bottom: 50px;
   font-weight: 700;
-  font-size: 36px;
   line-height: 1.17;
   text-align: center;
   letter-spacing: 0.03em;
   color: #212121;
+}
+
+@media screen and (max-width: 1199px) {
+  .specialization__main-title, .team__main-title, .customers__main-title {
+    margin-bottom: 30px;
+    font-size: 28px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .specialization__main-title, .team__main-title, .customers__main-title {
+    margin-bottom: 50px;
+    font-size: 36px;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .advantages, .team, .customers {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .advantages, .team, .customers {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .header--positioned {
@@ -920,19 +946,25 @@ textarea {
 }
 
 .advantages {
-  padding-top: 60px;
   background-color: #ffffff;
+}
+
+@media screen and (max-width: 1199px) {
+  .advantages {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
 }
 
 @media screen and (min-width: 1200px) {
   .advantages {
     padding-top: 94px;
+    padding-bottom: 94px;
   }
 }
 
 .advantages__list {
   position: relative;
-  padding-bottom: 60px;
 }
 
 @media screen and (min-width: 768px) {
@@ -948,7 +980,9 @@ textarea {
 
 @media screen and (min-width: 1200px) {
   .advantages__list {
-    padding-bottom: 94px;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    margin-top: 0;
   }
 }
 
@@ -1048,9 +1082,14 @@ textarea {
 }
 
 .specialization {
-  padding-top: 94px;
   padding-bottom: 94px;
   background-color: #ffffff;
+}
+
+@media screen and (max-width: 1199px) {
+  .specialization {
+    display: none;
+  }
 }
 
 .spec__list {
@@ -1093,8 +1132,6 @@ textarea {
 }
 
 .team {
-  padding-top: 94px;
-  padding-bottom: 94px;
   background-color: #F5F4FA;
 }
 
@@ -1102,21 +1139,41 @@ textarea {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex: wrap;
-      -ms-flex-positive: wrap;
-          flex-grow: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: -15px;
 }
 
 .team__item {
-  width: calc((100% - 90px) / 4);
+  margin: 15px;
   text-align: center;
   -webkit-box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
           box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
   background: #ffffff;
 }
 
-.team__item + .team__item {
-  margin-left: 30px;
+@media screen and (max-width: 767px) {
+  .team__item {
+    width: 450px;
+  }
+  .team__item img {
+    width: 450px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .team__item {
+    width: calc((100% - 60px) / 2);
+  }
+  .team__item img {
+    width: 354px;
+  }
+}
+
+@media screen and (min-width: 1199px) {
+  .team__item {
+    width: 270px;
+  }
 }
 
 .team__names {
@@ -1167,8 +1224,6 @@ textarea {
 }
 
 .customers {
-  padding-top: 94px;
-  padding-bottom: 94px;
   background-color: #ffffff;
 }
 
