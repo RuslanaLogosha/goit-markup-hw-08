@@ -29,9 +29,7 @@
 .header__logo {
   @extend %ancor;
   display: block;
-  padding-top: 25px;
-  padding-bottom: 25px;
-
+  
   font-family: $logo-font;
   font-style: normal;
   font-weight: 700;
@@ -45,7 +43,7 @@
 
   @media screen and (min-width: 768px) {
     padding-top: 26px;
-    padding-bottom: 26px;
+    padding-bottom: 25px;
   }
 
   @media screen and (max-width: 1199px) {
@@ -54,8 +52,11 @@
   }
 
   @media screen and (min-width: 1200px) {
+    padding-top: 24px;
+    padding-bottom: 24px;
     font-size: 26px;
     line-height: 1.19;
+
   }
 }
 

@@ -1,6 +1,19 @@
 .filters {
-  padding-top: 93px;
-  padding-bottom: 50px;
+
+  @media screen and (max-width: 767px) {
+    padding-top: 60px;
+    padding-bottom: 40px;
+  }
+
+  @media screen and (min-width: 768px) {
+    padding-top: 60px;
+    padding-bottom: 30px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 93px;
+    padding-bottom: 50px;
+  }
 }
 
 .filters__header {
@@ -14,12 +27,33 @@
 
 .filters__list {
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
+
+  @media screen and (max-width: 767px) {
+    align-content: flex-start;
+  }
+
+  @media screen and (min-width: 768px) {
+    justify-content: center;
+  }
 }
 
-.filters__list-item + .filters__list-item {
-  margin-left: 8px;
+@media screen and (max-width: 767px) {
+  .filters__list-item {
+    margin-right: 8px;
+  }
+
+  .filters__list-item:not(:nth-last-child(-n + 2)) {
+    margin-bottom: 15px;
+  }
 }
+
+@media screen and (min-width: 768px) {
+  .filters__list-item + .filters__list-item {
+    margin-left: 8px;
+  }
+}
+
 
 .filters__button {
   @extend %button-portfolio;

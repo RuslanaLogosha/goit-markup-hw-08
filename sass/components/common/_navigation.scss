@@ -26,8 +26,6 @@
   @extend %ancor;
 
   display: block;
-  padding-top: 32px;
-  padding-bottom: 32.5px;
 
   font-weight: 500;
   line-height: 1.14;
@@ -40,7 +38,13 @@
   }
 
   @media screen and (min-width: 768px) and (max-width: 1199px) {
-    padding-bottom: 31px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 32px;
+    padding-bottom: 32px;
   }
 }
 
@@ -111,7 +115,7 @@
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .site-auth__button-tel {
-    padding-bottom: 21px;
+    padding-bottom: 17px;
   }
 }
 
