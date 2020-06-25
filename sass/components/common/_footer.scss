@@ -1,26 +1,45 @@
 .footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
   background-color: $footer-background-color;
 }
 
 .footer-flex {
   @extend %container;
-  // display: flex;
-  justify-content: space-between;
+  
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: space-around;
 
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    flex-wrap: wrap;
+  }
+
+  @media screen and (min-width: 1200px) {
+    justify-content: space-between;
+  }
 }
 
 .footer__logo {
   display: block;
-  margin-top: 48px;
-  margin-bottom: 10px;
+  margin-top: 0;
+  margin-bottom: 20px;
 
   font-family: Raleway;
   font-weight: 700;
-  font-size: 22px;
-  line-height: 1.18;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1.17;
   letter-spacing: 0.03em;
   color: $main-title-color;
+
+  @media screen and (max-width: 1199px) {
+    text-align: center;
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 26px;
+    line-height: 1.18;
+  }
 }
 
 .footer__logo .web{
@@ -28,8 +47,8 @@
 }
 
 .address {
-  display: block; 
-  padding-bottom: 28px;
+  // display: block; 
+  margin-bottom: 60px;
 }
 
 .address__name {
@@ -39,6 +58,10 @@
   font-style: normal;
   letter-spacing: 0.03em;
   color: $main-title-color;
+
+  @media screen and (max-width: 767px) {
+    text-align: center;
+  }
 }
 
 .footer__contact {
@@ -49,26 +72,33 @@
   font-style: normal;
   letter-spacing: 0.03em;
   color: $footer-opaque-color;
+
+  @media screen and (max-width: 1199px) {
+    text-align: center;
+  }
 }
 
 /* Connect social  */
 
 .connect__text {
-  margin-top: 48px;
-  margin-bottom: 21px;
+  margin-bottom: 20px;
 
   font-weight: 700;
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: $main-title-color;
+
+  @media screen and (max-width: 1199px) {
+    text-align: center;
+  }
 }
 
 .footer__icons-list {
   @extend %list;
   display: flex;
   justify-content: center;
-  padding-bottom: 24px;
+  margin-bottom: 60px;
 }
 
 .footer__icons-list > li + li {
@@ -93,9 +123,8 @@
 }
 
 /* Subscribe */
+
 .subscribe__email {
-  margin-right: 10px;
-  width: 358px;
   height: 49px;
   padding: 15px 16px;
   
@@ -107,6 +136,16 @@
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   background-color: $footer-background-color;
+
+  @media screen and (max-width: 1199px) {
+    width: 450px;
+    margin-bottom: 20px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 358px;
+    margin-right: 10px;
+  }
 }
 
 /* Training of button with 2 pseudoelements flying aroud */
@@ -118,6 +157,12 @@
   &:hover,
   &:focus {
     background-color: palevioletred;
+  }
+
+  @media screen and (max-width: 1199px) {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 

@@ -1321,26 +1321,55 @@ textarea {
 }
 
 .footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
   background-color: #2F303A;
 }
 
-.footer-flex {
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+@media screen and (min-width: 768px) {
+  .footer-flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer-flex {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
 }
 
 .footer__logo {
   display: block;
-  margin-top: 48px;
-  margin-bottom: 10px;
+  margin-top: 0;
+  margin-bottom: 20px;
   font-family: Raleway;
   font-weight: 700;
-  font-size: 22px;
-  line-height: 1.18;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1.17;
   letter-spacing: 0.03em;
   color: #FFFFFF;
+}
+
+@media screen and (max-width: 1199px) {
+  .footer__logo {
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer__logo {
+    font-size: 26px;
+    line-height: 1.18;
+  }
 }
 
 .footer__logo .web {
@@ -1348,8 +1377,7 @@ textarea {
 }
 
 .address {
-  display: block;
-  padding-bottom: 28px;
+  margin-bottom: 60px;
 }
 
 .address__name {
@@ -1360,6 +1388,12 @@ textarea {
   color: #FFFFFF;
 }
 
+@media screen and (max-width: 767px) {
+  .address__name {
+    text-align: center;
+  }
+}
+
 .footer__contact {
   display: block;
   margin-top: 9px;
@@ -1368,15 +1402,26 @@ textarea {
   color: rgba(255, 255, 255, 0.6);
 }
 
+@media screen and (max-width: 1199px) {
+  .footer__contact {
+    text-align: center;
+  }
+}
+
 /* Connect social  */
 .connect__text {
-  margin-top: 48px;
-  margin-bottom: 21px;
+  margin-bottom: 20px;
   font-weight: 700;
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #FFFFFF;
+}
+
+@media screen and (max-width: 1199px) {
+  .connect__text {
+    text-align: center;
+  }
 }
 
 .footer__icons-list {
@@ -1386,7 +1431,7 @@ textarea {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding-bottom: 24px;
+  margin-bottom: 60px;
 }
 
 .footer__icons-list > li + li {
@@ -1410,8 +1455,6 @@ textarea {
 
 /* Subscribe */
 .subscribe__email {
-  margin-right: 10px;
-  width: 358px;
   height: 49px;
   padding: 15px 16px;
   font-size: 16px;
@@ -1425,6 +1468,20 @@ textarea {
   background-color: #2F303A;
 }
 
+@media screen and (max-width: 1199px) {
+  .subscribe__email {
+    width: 450px;
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .subscribe__email {
+    width: 358px;
+    margin-right: 10px;
+  }
+}
+
 /* Training of button with 2 pseudoelements flying aroud */
 .subscribe__button {
   position: relative;
@@ -1433,6 +1490,14 @@ textarea {
 
 .subscribe__button:hover, .subscribe__button:focus {
   background-color: palevioletred;
+}
+
+@media screen and (max-width: 1199px) {
+  .subscribe__button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .btn-text {

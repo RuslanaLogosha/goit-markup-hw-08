@@ -1,7 +1,9 @@
 .team {
   @extend %section-paddings;
   background-color: $team-background-color;
+  // background-color: red;
 }
+
 
 .team__main-title {
   @extend %section-title;
