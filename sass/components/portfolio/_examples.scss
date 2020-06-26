@@ -1,5 +1,11 @@
 .examples-section {
-  padding-bottom: 94px;
+  @media screen and (max-width: 1199px) {
+    padding-bottom: 60px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding-bottom: 94px;
+  }
 }
 
 .examples-section__header {
@@ -14,10 +20,36 @@
   @extend %list;
   display: flex;
   flex-wrap: wrap;
+  margin: -15px;
 }
 
 .examples__item {
-  width: calc((100% - 60px) / 3);
+  margin: 15px;
+
+  @media screen and (max-width: 767px) {
+    width: 450px;
+
+    & img {
+      width: 450px;
+    }
+  }
+
+  @media screen and (min-width: 767px) {
+    width: calc((100% - 60px) / 2);
+
+    & img {
+      width: 354px;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: calc((100% - 90px) / 3);
+
+    & img {
+      width: 370px;
+    }
+  }
+
 
   &:hover,
   &:focus {
@@ -26,13 +58,13 @@
   }
 }
 
-.examples__item:not(:nth-child(3n)) {
-  margin-right: 30px;
-}
+// .examples__item:not(:nth-child(3n)) {
+//   margin-right: 30px;
+// }
 
-.examples__item:not(:nth-child(-n+3)) {
-  margin-bottom: 30px;
-}
+// .examples__item:not(:nth-child(-n+3)) {
+//   margin-bottom: 30px;
+// }
 
 // Examples overlay
 
@@ -88,6 +120,7 @@
   border-bottom: 1px solid $card-border-color;
   border-left: 1px solid $card-border-color;
   border-right: 1px solid $card-border-color;
+  display: block;
 }
 
 .examples__headings {
@@ -100,7 +133,16 @@
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
+
+  text-overflow: ellipsis;
+  overflow: hidden;
   color: $titles-text-color;
+
+  @media screen and (min-width: 768px) and (max-width:1199px) {
+    width: 350px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
 }
 
 .examples__type {
