@@ -19,6 +19,49 @@
           <li class="site-nav__item"><a href="./portfolio.html" class="site-nav__link">Портфолио</a></li>
           <li class="site-nav__item"><a href="#" class="site-nav__link">Контакты</a></li>
         </ul>
+
+        <button type="button" class="mobile__button" data-menu-button>
+          <svg class="mobile__button-icon" 
+          width="40" 
+          height="40"
+          aria-label="Переключатель мобильного меню"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          >
+            <use class="mobile__button-icon--menu" href="./images/sprite.svg#menu"></use> 
+            <use class="mobile__button-icon--cross" href="./images/sprite.svg#cross"></use>
+          </svg>
+        </button>
+
+        <div class="mobile-menu" id="mobile-menu" data-menu>
+          <ul class="site-nav">
+            <li class="site-nav__item"><a href="./index.html" class="site-nav__link site-nav__link--current">Студия</a></li>
+            <li class="site-nav__item"><a href="./portfolio.html" class="site-nav__link">Портфолио</a></li>
+            <li class="site-nav__item"><a href="#" class="site-nav__link">Контакты</a></li>
+          </ul>
+
+          <ul class="site-auth">
+            <li class="site-auth__item">
+              <span class="site-auth__button site-auth__button-mail">
+                <a href="mailto:info@devstudio.com" class="site-auth__link">
+                  <svg class="site-auth__icon" width="16" height="11.2">
+                  <use href="./images/sprite.svg#icon-mail"></use>
+                  </svg>
+                info@devstudio.com</a>
+              </span>
+              
+            </li>
+            <li class="site-auth__item">
+              <span class="site-auth__button site-auth__button-tel">
+                <a href="tel:+380961111111" class="site-auth__link">
+                  <svg class="site-auth__icon" width="10" height="14.94">
+                  <use href="./images/sprite.svg#icon-tel"></use>
+                </svg>
+                  +38 096 111 11 11</a>
+              </span>
+            </li>
+          </ul>
+        </div>
       </nav>
   
       <ul class="site-auth">
@@ -103,8 +146,8 @@
         <label class="policy">
           <input type="checkbox" class="checkbox" name="policy">
           <span class="check-icon"></span>
-          <span class="policy__text">Соглашаюсь с рассылкой и принимаю &nbsp</span>
-          <a href="#">Условия договора</a>
+          <span class="policy__text">Соглашаюсь с рассылкой и принимаю
+          <a href="#">Условия договора</a></span>
         </label>
         
         <button class="form__send-button">Отправить</button>
@@ -459,6 +502,7 @@
   </script> -->
 
 <script src="./js/modal.js"></script>
+<script src="./js/menu.js"></script>
 
 </body>
 </html>

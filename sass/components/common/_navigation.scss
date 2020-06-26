@@ -1,13 +1,18 @@
 .main-nav {
-  @media screen and (min-width: 768px) {
-    display: flex;
-  }
+  display: flex;
+
+  // @media screen and (max-width: 767px) {
+  //   justify-content: space-around;
+  // }
 }
 
 .site-nav {
   @extend %list;
-  display: none;
 
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+  
   @media screen and (min-width: 768px) {
     display: flex;
     margin-left: 81px;
@@ -152,4 +157,79 @@
 .site-auth__button:hover svg, 
 .site-auth__button:focus svg {
   fill: $accent-text-color;
+}
+
+// Меню для смартфона
+.mobile__button {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  margin-left: 267px;
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.mobile__button-icon {
+  width: 40px;
+  height: 40px;
+  fill: $titles-text-color;
+  
+  &:hover,
+  &:focus {
+    fill: $accent-text-color;
+  }
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.mobile__button-icon--cross {
+  display: none;
+
+  .mobile__button.is-open & {
+    display: block;
+  }
+}
+
+.mobile__button.is-open .mobile__button-icon--menu {
+  display: none;
+}
+
+.mobile-menu {
+
+  background-color: palevioletred;
+
+  @media screen and (max-width: 767px) {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    z-index: 6;
+
+    &.is-open {
+      display: block;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.mobile-menu .site-nav {
+  @media screen and (max-width: 767px) {
+    display: flex;
+  }
+}
+
+.mobile-menu .site-auth {
+  @media screen and (max-width: 767px) {
+    display: flex;
+  }
 }
