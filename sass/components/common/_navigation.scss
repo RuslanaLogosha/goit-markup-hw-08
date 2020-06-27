@@ -248,6 +248,9 @@
   line-height: 1.16;
 }
 
+.mobile-menu .site-nav__link--current {
+  padding-bottom: 10px;
+}
 
 .mobile-menu .site-auth {
   @media screen and (max-width: 767px) {

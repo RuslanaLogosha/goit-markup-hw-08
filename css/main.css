@@ -751,6 +751,10 @@ h1, h2, h3 {
   line-height: 1.16;
 }
 
+.mobile-menu .site-nav__link--current {
+  padding-bottom: 10px;
+}
+
 @media screen and (max-width: 767px) {
   .mobile-menu .site-auth {
     display: -webkit-box;
