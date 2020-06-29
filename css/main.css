@@ -1395,6 +1395,32 @@ textarea {
   }
 }
 
+.team__list .thumb {
+  height: 320px;
+}
+
+@media screen and (min-width: 768px) {
+  .team__list .thumb {
+    height: 260px;
+  }
+}
+
+.team__item img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+}
+
+@media screen and (min-width: 768px) {
+  .team__list .thumb {
+    height: 260px;
+  }
+}
+
 .team__names {
   padding-top: 30px;
   margin-bottom: 10px;

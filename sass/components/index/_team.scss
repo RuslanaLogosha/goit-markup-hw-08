@@ -48,9 +48,32 @@
   @media screen and (min-width: 1199px) {
     width: 270px;
   }
-
 }
 
+// Адаптивное изображение
+.team__list .thumb {
+  height: 320px;
+
+  @media screen and (min-width: 768px) {
+      height: 260px;
+  }
+}
+
+.team__item img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+@media screen and (min-width: 768px) {
+  .team__list .thumb {
+    height: 260px;
+  }
+}
+
+// Конец
 // .team__item + .team__item {
 //   margin-left: 30px;
 // }
