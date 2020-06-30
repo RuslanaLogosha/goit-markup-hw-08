@@ -1350,7 +1350,7 @@ textarea {
 
 @media screen and (max-width: 767px) {
   .team {
-    width: 100%;
+    width: 480px;
   }
 }
 
@@ -1573,7 +1573,7 @@ textarea {
 
 @media screen and (max-width: 767px) {
   .footer {
-    width: 100%;
+    width: 480px;
   }
 }
 

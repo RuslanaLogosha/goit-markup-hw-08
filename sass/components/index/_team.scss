@@ -1,9 +1,9 @@
 .team {
   @extend %section-paddings;
   background-color: $team-background-color;
-
+ 
   @media screen and (max-width: 767px) {
-    width: 100%;    
+    width: 480px;  
   }
 }
 
