@@ -1348,12 +1348,6 @@ textarea {
   background-color: #F5F4FA;
 }
 
-@media screen and (max-width: 767px) {
-  .team {
-    width: 480px;
-  }
-}
-
 .team__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1569,12 +1563,6 @@ textarea {
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: #2F303A;
-}
-
-@media screen and (max-width: 767px) {
-  .footer {
-    width: 480px;
-  }
 }
 
 @media screen and (min-width: 768px) {
